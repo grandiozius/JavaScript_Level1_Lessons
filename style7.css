@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.black { 
+  background-color: gray;
+} 
+
+.white { 
+  background-color: white;
+}
+
+.txt {
+  display: table-cell;
+  font-size: 50px;
+  text-align: center;
+  vertical-align: middle;
+  width: 50px; 
+  height: 50px;
+}
+
+.whitefigures {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+.whitepawns {
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
