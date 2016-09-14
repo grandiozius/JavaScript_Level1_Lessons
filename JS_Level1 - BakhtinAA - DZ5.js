@@ -4,12 +4,9 @@
 // Функция должна принимать 3 числа от 0 до 255 и возвращать строковый хеш.
 var red, green, blue;
 function color2hex (r, g, b) {
-  if (r < 16) r = "0" + r.toString(16);
-  else r = r.toString(16);
-  if (g < 16) g = "0" + g.toString(16);
-  else g = g.toString(16);
-  if (b < 16) b = "0" + b.toString(16);
-  else b = b.toString(16);
+  r = r < 16 ? "0" + r.toString(16) : r.toString(16);
+  g = g < 16 ? "0" + g.toString(16) : g.toString(16);
+  b = b < 16 ? "0" + b.toString(16) : b.toString(16);
   var hex = "#" + r + g + b;
   return hex;
 }
@@ -37,22 +34,16 @@ console.log(color2hex(red, green, blue));
 var num = +prompt("Enter your number [0..999]:");
 function str2obj (str) {
   var obj = {};
+  var names = ["ones", "tens", "hundreds"];
   if (str < 0 || str > 999 || isNaN(str) == true) {
     console.log("Out of range");
     obj = {};
   }
   else {
     str = str.toString();
-    if (str.length == 3) {
-      obj.ones = str[2];
-      obj.tens = str[1];
-      obj.hundreds = str[0];      
+    for (var i = str.length - 1; i >= 0; i--) {
+      obj[names[str.length - 1 - i]] = str[i];
     }
-    else if (str.length == 2) {
-      obj.ones = str[1];
-      obj.tens = str[0];
-    }
-    else obj.ones = str[0];
   }
   return obj;
 }
@@ -69,11 +60,6 @@ var obj = {
   property4: 1+3
 };
 function objectToQueryString (object) {
-    var str = "";
-    for (var prop in object) {
-      str += prop + "=" + object[prop] + " & ";
-    }
-    str = str.substr(0, str.length - 3);
-    return str;
+  return Object.keys(object).map(function(key) { return key + "=" + object[key]; }).join("&");
 }
 console.log(objectToQueryString(obj));
