@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  cursor: default;
+}
+
+h1 {
+  font-family: Arial;
+  font-size: 40px;
+  color: gray;
+  text-align: center;
+  margin: 20px;
+}
+
+.search {
+  display: block;
+  width: 590px;
+  margin: auto;
+  font-size: 20px;
+  font-family: Arial;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#users {
+  display: block;
+  font-size: 21px;
+  font-family: Arial;
+  text-align: left;
+  width: 600px;
+  margin: 20px auto;
+}
+
+.row {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.nn {
+  display: inline-block;
+  margin: 0;
+  width: 30px;
+  font-style: Italic;
+}
+
+.name {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  width: 500px;
+}
+
+.birth, .phone {
+  display: none;
+  margin: 10px;
+  width: 580px;
+}
+
+.delbtn {
+  display: block;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 10px;
+  float: right;
+}
+
+form {
+  width: 600px;
+  margin: auto;
+}
+
+.fname, .lname, .birthday {
+  display: block;
+  font-family: Arial;
+  font-size: 20px;
+  width: 99%;
+  margin: 5px auto;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.addphone {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  width: 93%;
+  margin: 1px;
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.plusbtn, .minusbtn {
+  display: block;
+  font-family: Arial;
+  font-size: 20px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin: 1px;
+  float: right;
+}
+
+.submitbtn, .resetbtn {
+  display: inline-block;
+  font-family: Arial;
+  font-size: 20px;
+  width: 290px;
+  height: 30px;
+  margin: 5px;
+  cursor: pointer;
+}
